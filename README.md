@@ -39,3 +39,10 @@ alanRef.setValue(alan);
 alansRef.child("fullName").setValue("Alan Turing");
 alansRef.child("birthYear").setValue(1912);
 ```
+
+After:
+
+```java
+User alan = User.builder().fullName("Alan Turing").birthYear(1912).build();
+User alan2 = alan.toRef().fullName("Alan Turing").birthYear(1912).build();
+```
